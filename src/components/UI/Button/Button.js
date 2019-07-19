@@ -1,13 +1,18 @@
 import React from 'react';
-import classes from './Button.css';
+import  './Button.css';
 
-const button = (props) => (
-    <button className={classes.Button}
+const button = (props) => {
+    let arrow = <i className="fa fa-arrow-right IconRight"/>
+    if (!props.arrow) {
+        arrow = ''
+    }
+    return <button className="Button"
+            style={{float: props.pos, color: props.color}}
             onClick={props.clicked}
             disabled={props.disabled}
-    >Next
-    <i className="fa fa-arrow-right"/>
+    >{props.children}
+        {arrow}
     </button>
-);
+};
 
 export default button;

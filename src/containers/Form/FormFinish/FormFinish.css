@@ -1,0 +1,22 @@
+.FormFinish {
+    width: 400px;
+    margin: 0 auto;
+}
+.FormFinish img {
+    width: 150px;
+    height: 150px;
+    margin: 20% 30%;
+
+}
+.btnFinish {
+    background-color: #fff;
+    color: #36a2eb;
+    outline: none;
+    border: 1px solid #36a2eb;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+.footerFinishBlock {
+    margin-top: 100px;
+}

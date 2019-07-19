@@ -1,4 +1,16 @@
 .Button {
     width: 120px;
-    color: #61dafb;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #36a2eb;
+    margin: 25px 0;
+}
+.Button:focus {
+    outline: none;
+}
+.IconRight {
+    text-align: right;
+    margin-left: 5px;
+    font-size: 12px;
 }
