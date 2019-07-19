@@ -3,7 +3,7 @@ import './Input.css';
 
 const input = (props) => {
     const inputClasses = ['Input'];
-    let label = <label>{props.label}</label>
+    let label = <label>{props.label}</label>;
     if (props.err) {
         inputClasses.push('invalid')
         label = <label style={{color: 'salmon'}}>Check your {props.label}</label>

@@ -11,9 +11,9 @@ export const sendFormFromBlocks = (value, day, month, year, gender) => {
     }
 };
 
-export const sendFormFromInput = (formData)=> {
-  return {
-      type: actionsType.DATA_FROM_FORM_INPUT,
-      formData: formData
-  }
+export const sendFormFromInput = (formData) => {
+    return {
+        type: actionsType.DATA_FROM_FORM_INPUT,
+        formData: formData
+    }
 };

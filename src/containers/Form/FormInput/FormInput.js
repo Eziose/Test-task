@@ -53,7 +53,7 @@ class FormInput extends Component {
         },
         passwordFalse: false,
         formIsValid: false
-    }
+    };
     checkValidity = (value, rules) => {
         let isValid = true;
         if (!rules) {
@@ -87,9 +87,9 @@ class FormInput extends Component {
         }
     };
     checkPassword = (pass, confirm) => {
-      if (pass === confirm) {
-          return true;
-      }
+        if (pass === confirm) {
+            return true;
+        }
     };
     inputChangedHandler = (event, inputIdentifier) => {
 
@@ -109,46 +109,48 @@ class FormInput extends Component {
         }
         this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid})
     };
- render () {
-     const formElementsArr = [];
-     for (let key in this.state.orderForm) {
-         formElementsArr.push({
-             id: key,
-             config: this.state.orderForm[key]
-         })
-     }
-     let form = <form action="">
-         {formElementsArr.map(formElement => (
-             <Input
-                 err={this.state.passwordFalse}
-                 label={formElement.config.elementText}
-                 key={formElement.id}
-                 elementType={formElement.config.elementType}
-                 elementConfig={formElement.config.elementConfig}
-                 value={formElement.config.value}
-                 invalid={!formElement.config.valid}
-                 shouldValidate={formElement.config.validation}
-                 touched={formElement.config.touched}
-                 changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
-         ))}
-     </form>;
-     return (
-         <Layout title='Signup' steps='35%'>
 
-             <div className="FormInput">
-                 {form}
-             </div>
-             <div className="foot">
-                 <div className="row">
-                     <div className="col">
-                         <Button pos='right' arrow clicked={this.orderHandler}>Next</Button>
-                     </div>
-                 </div>
-             </div>
-         </Layout>
-     )
- }
+    render() {
+        const formElementsArr = [];
+        for (let key in this.state.orderForm) {
+            formElementsArr.push({
+                id: key,
+                config: this.state.orderForm[key]
+            })
+        }
+        let form = <form action="">
+            {formElementsArr.map(formElement => (
+                <Input
+                    err={this.state.passwordFalse}
+                    label={formElement.config.elementText}
+                    key={formElement.id}
+                    elementType={formElement.config.elementType}
+                    elementConfig={formElement.config.elementConfig}
+                    value={formElement.config.value}
+                    invalid={!formElement.config.valid}
+                    shouldValidate={formElement.config.validation}
+                    touched={formElement.config.touched}
+                    changed={(event) => this.inputChangedHandler(event, formElement.id)}/>
+            ))}
+        </form>;
+        return (
+            <Layout title='Signup' steps='35%'>
+
+                <div className="FormInput">
+                    {form}
+                </div>
+                <div className="foot">
+                    <div className="row">
+                        <div className="col">
+                            <Button pos='right' arrow clicked={this.orderHandler}>Next</Button>
+                        </div>
+                    </div>
+                </div>
+            </Layout>
+        )
+    }
 }
+
 const mapDispatchToProps = dispatch => {
     return {
         onSendForm: (formData) => dispatch(action.sendFormFromInput(formData)),

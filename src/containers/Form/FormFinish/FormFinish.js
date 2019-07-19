@@ -18,14 +18,16 @@ class FormFinish extends Component {
         };
         console.log(JSON.stringify(data))
         this.props.history.push('/')
-    }
-    render () {
+    };
+
+    render() {
         return (
             <Layout title="Thank You!" steps='100%'>
                 <div className="FormFinish">
                     <img src={Logo} alt=""/>
                     <div className="text-center">
-                        <button className="btnFinish" onClick={this.sendData}>Go to Dashboard<i className="fa fa-arrow-right IconRight"/></button>
+                        <button className="btnFinish" onClick={this.sendData}>Go to Dashboard<i
+                            className="fa fa-arrow-right IconRight"/></button>
                     </div>
                     <div className="footerFinishBlock">
                     </div>
