@@ -17,3 +17,20 @@ export const sendFormFromInput = (formData) => {
         formData: formData
     }
 };
+export const removeConfig = (id) => {
+    return {
+        type: actionsType.REMOVE_CONFIG,
+        id: id
+    }
+};
+
+export const toggleModal = () => {
+    return {
+        type: actionsType.TOGGLE_MODAL
+    }
+};
+export const hideModal = () => {
+    return {
+        type: actionsType.HIDE_MODAL
+    }
+};

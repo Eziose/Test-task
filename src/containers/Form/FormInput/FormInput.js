@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './FormInput.css';
+import { Link } from "react-router-dom";
+
 import Layout from '../../../components/Layout/Layout';
 import Input from '../../../components/UI/Input/Input';
 import Button from "../../../components/UI/Button/Button";
@@ -135,7 +137,7 @@ class FormInput extends Component {
         </form>;
         return (
             <Layout title='Signup' steps='35%'>
-
+                <Link to="/config">Config</Link>
                 <div className="FormInput">
                     {form}
                 </div>

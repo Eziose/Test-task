@@ -7,6 +7,7 @@ const layout = (props) => {
             <p className="titleOfHeader">{props.title}</p>
             <div className="outerStep">
                 <div style={{width: props.steps}} className="innerStep"></div>
+
             </div>
         </div>
         <div className="content">
